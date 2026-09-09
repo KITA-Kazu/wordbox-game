@@ -219,6 +219,7 @@ function startGame() {
   streakDown = 0;
   timeLeft = 90;
   wrongQuestions = [];
+  usedWords = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [] };
   isReviewMode = false;
 
   screenStart.classList.add('hidden');
@@ -237,7 +238,6 @@ function startGame() {
     }
   }, 1000);
 }
-
 function updateHeaderUI() {
   document.getElementById('lbl-level').innerText = `Level ${currentLevel}`;
   document.getElementById('lbl-max-level').innerText = `Level ${maxLevelAchieved}`;
